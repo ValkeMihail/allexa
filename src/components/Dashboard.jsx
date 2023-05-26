@@ -67,47 +67,47 @@ function Dashboard() {
   const handleFileUpload = async (files) => {
     try {
       for (const file of files) {
-        if (file.size > 500000) {
-            const canvas = document.createElement('canvas');
-            const ctx = canvas.getContext('2d');
-            const image = new Image();
-            image.onload = async () => {
-              const maxWidth = 1000;
-              const maxHeight = 1000;
-              let width = image.width;
-              let height = image.height;
-              if (width > height) {
-                if (width > maxWidth) {
-                  height *= maxWidth / width;
-                  width = maxWidth;
-                }
-              } else {
-                if (height > maxHeight) {
-                  width *= maxHeight / height;
-                  height = maxHeight;
-                }
-              }
-              canvas.width = width;
-              canvas.height = height;
-              ctx.drawImage(image, 0, 0, width, height);
-              const resizedFile = await new Promise((resolve) => {
-                canvas.toBlob((blob) => {
-                  resolve(new File([blob], file.name, { type: 'image/jpeg', lastModified: Date.now() }));
-                }, 'image/jpeg', 0.7);
-              });
-              const storageRef = ref(storage, `images/${resizedFile.name}`);
-              await uploadBytes(storageRef, resizedFile);
-              const downloadURL = await getDownloadURL(storageRef);
-              const docRef = doc(db, 'images', process.env.REACT_APP_DBKEY);
-              const docData = await getDoc(docRef);
-              const images = docData.data().images || [];
-              images.push(downloadURL);
-              await setDoc(docRef, { images });
-              setFile(null);
-              setError(null);
-            };
-            image.src = URL.createObjectURL(file);
-        } else {
+        // if (file.size > 500000) {
+        //     const canvas = document.createElement('canvas');
+        //     const ctx = canvas.getContext('2d');
+        //     const image = new Image();
+        //     image.onload = async () => {
+        //       const maxWidth = 1000;
+        //       const maxHeight = 1000;
+        //       let width = image.width;
+        //       let height = image.height;
+        //       if (width > height) {
+        //         if (width > maxWidth) {
+        //           height *= maxWidth / width;
+        //           width = maxWidth;
+        //         }
+        //       } else {
+        //         if (height > maxHeight) {
+        //           width *= maxHeight / height;
+        //           height = maxHeight;
+        //         }
+        //       }
+        //       canvas.width = width;
+        //       canvas.height = height;
+        //       ctx.drawImage(image, 0, 0, width, height);
+        //       const resizedFile = await new Promise((resolve) => {
+        //         canvas.toBlob((blob) => {
+        //           resolve(new File([blob], file.name, { type: 'image/jpeg', lastModified: Date.now() }));
+        //         }, 'image/jpeg', 0.7);
+        //       });
+        //       const storageRef = ref(storage, `images/${resizedFile.name}`);
+        //       await uploadBytes(storageRef, resizedFile);
+        //       const downloadURL = await getDownloadURL(storageRef);
+        //       const docRef = doc(db, 'images', process.env.REACT_APP_DBKEY);
+        //       const docData = await getDoc(docRef);
+        //       const images = docData.data().images || [];
+        //       images.push(downloadURL);
+        //       await setDoc(docRef, { images });
+        //       setFile(null);
+        //       setError(null);
+        //     };
+        //     image.src = URL.createObjectURL(file);
+        // } else {
           const storageRef = ref(storage, `images/${file.name}`);
           await uploadBytes(storageRef, file);
           const downloadURL = await getDownloadURL(storageRef);
@@ -116,7 +116,7 @@ function Dashboard() {
           const images = docData.data().images || [];
           images.push(downloadURL);
           await setDoc(docRef, { images });
-        }
+        // }
       }
       setFile(null);
       setError(null);
