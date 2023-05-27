@@ -36,78 +36,57 @@ height: 78.5vh;
   pointer-events: none;
 }
 
-#aboutmeImage{
-    position: absolute;
-    object-fit: contain;
-    top: 60vh;
-    left: 50%;
-    background-color: #A273A3  !important ;
-    transform: translate(-50%, -50%);
-    width: 100vw;
-    height: 100vh !important;
-    border-radius: 1em;
-    border-top: 2px solid #2D1115;
-    border-bottom: 2px solid #2D1115;
-    z-index: 0;
-}
-.about-container h3{
-    color: #DDFFF7  !important;
-    font-family: "Lora", serif;
-    text-shadow:  1px 1px 2px #2D1115;
-    top: 42vh !important;
-    left: 25em !important;
-    font-size: 2.5em !important;
-}
-#aboutmeheader{
-    top: 48vh !important;
-    font-size: 5em;
-    left: 12.5em;
-    text-shadow: 2px 1px 2px #2D1115;
-    font-family: "Lora", serif !important;
-}
-.about-container h1{
-    font-family: "Lora", serif !important; 
-    text-shadow:  1px 1px 2px #2D1115 !important;
-  
-}
+
+
 @media screen  and (max-width: 768px){
-    #aboutmeImage{
-        top: 14em;
-        width: 100%;
-        height: 30vh !important;
+   
+
+   
+    .headerAbout{
+        margin: 0;
+        width: 100vw !important;
+        position: relative;
+
+        height: fit-content !important;
     }
+    
+    #aboutmeImage{
+        width: 100% !important;
+        height: 100% !important;
+        
+    }
+    .aboutTitle{
+        top: 2vh !important;
+        right: 2vw !important;
+        
+    }
+
     .about-container h3{
-        top: 25% !important;
-        left: 75% !important;
-        font-size: 1.5em !important;
-        backdrop-filter: blur(5px);
-      
+     
+        font-size: 3vh !important;
     }
     #aboutmeheader{
-      
-        top: 30% !important;
-        left: 80% !important;
-        font-size: 2em !important;
-        backdrop-filter: blur(5px);
+        
+        font-size: 4vh !important;
     }
-    .separator{
-        margin-top: 22em !important;
-        height: 25vh !important;
-    }
-
     
+    
+.description{
+    padding-bottom: 10vh;
+    width: 100vw !important;
+    
+
+
+}
+.description h1{
+    font-size: 3vh !important;
+}
+
+.description p {
+    font-size: 2vh !important;
+}
 } 
 
-.about-container h3{
-    
-    color: #080F0F;
-    position: absolute;
-    top: 41%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 1.5em;
-    padding: 0;
-}
 html{
     background: #DDFFF7 !important;
 }
@@ -201,11 +180,6 @@ html{
     background: 
     #580E38 !important;
 }
-.about-container{
-    margin-top: 16em !important;
-    height:1em !important;
-    padding-bottom: 30em !important;
-}
 
 
 .container-fluid a{
@@ -280,10 +254,83 @@ html{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem;
+    justify-content: center;
+
+    margin-top: 7em !important;
+    margin-left: auto !important; 
+    margin-right: auto !important;
+    padding: 0;
     text-align: center;
-    height: 100vh;
+    
+    position: relative;
+    width: 100vw !important;
   }
+  #aboutmeImage{
+    /* position: inherit;
+    object-fit: contain;
+   
+    background-color: #A273A3  !important ;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100vh !important;
+    border-radius: 1em;
+    border-top: 2px solid #2D1115;
+    border-bottom: 2px solid #2D1115;
+    z-index: 0; */
+    position: relative;
+    margin: 0;
+    width: 80vw;
+    height: 83vh;
+    max-height: 70%;
+    max-width: 100%;
+    object-fit: contain;
+   
+
+    
+}
+
+.headerAbout{
+    margin: 0;
+    width: 100%;
+    position: relative;
+    
+}
+
+.aboutTitle{
+    position: absolute;
+    top: 20vh;
+    height: 30vh ;
+    right: 24vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.about-container h3{
+    color: #DDFFF7  !important;
+    font-family: "Lora", serif;
+    text-shadow:  1px 1px 2px #2D1115;
+    margin: 0;
+    
+    font-size: 6vh;
+}
+#aboutmeheader{
+    align-self: flex-end;
+    margin: 0;
+    font-size: 7vh;
+    color: #A273A3;
+    text-shadow: 2px 1px 2px #2D1115;
+    font-family: "Lora", serif !important;
+}
+.about-container h1{
+    font-family: "Lora", serif !important; 
+    text-shadow:  1px 1px 2px #2D1115 !important;
+  
+}
+
+
   .form-wrapper {
     display: flex;
     flex-direction: column;
@@ -406,19 +453,6 @@ html{
     color: red;
   }
   
-  .about-container h2 {
-    font-size: 5em;
-    z-index: 2;
-    color: #A273A3;
-    position: absolute;
-    top: 43%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-weight: 100;
-    margin-bottom: 4rem;
-    font-family: Georgia, Times, 'Times New Roman', serif  !important;
-    text-shadow: 2px 2px  #080F0F;
-  }
 
   .about-container p {
     font-size: 1.1em;
@@ -477,17 +511,7 @@ html{
 
 
 
-  .animated3 {
-    transition: all 2.5s ease-out;
-    opacity: 1;
-    transform: translateY(-5em);
-  }
-  
-  .animated3.inView {
-    opacity: 0;
-    transform: translateY(5em);
-  }
-  
+
   .separator h1{
     position: absolute;
     top :0.2em;
@@ -504,14 +528,16 @@ html{
 
     margin-left: 0 !important;
     margin-right: 0 !important;
-    height: fit-content !important;
+    height: 10.1em;
     min-height:10em;
+    max-height: 60em;
     color: #080F0F;
-    border-top: 1px solid #080F0F;
+
     border-top-left-radius: 0.5em ;
     border-top-right-radius: 0.5em ;
     background-color: #A273A3 ;
     width: 100vw;
+    max-width: 800px;
     z-index: 22;
   }
   
@@ -731,28 +757,14 @@ background:  #A273A370;
    align-items: center;
 }
 
-.separator{
-    width: 50%;
-    height: 50vh !important;
-    margin-top: 22em;
-}
-.borderLay{
-    width: 100%;
-    
-    min-height: 2em;
-    
-    
-}
+ 
+
 .ContactContainer input{
     
     width: 30vw !important;
    
   }
- 
-.separator h1{
-    
-    left: 40%;
-}
+
   }
   .carousel-slide-indicator{
     position: absolute;
@@ -804,4 +816,33 @@ background:  #A273A370;
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+
+
+
+.description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #A273A3;
+    font-family: "Lora" , serif;
+    width: 58.5vw;
+    margin: 0;
+
+
+}
+.description h1{
+    color: #DDFFF7 !important;
+    font-size: 4vh;
+}
+
+.description p {
+    color: #DDFFF7 !important;
+    font-size: 3vh;
+}
+
+* ::selection {
+    color: #580E38;
+    background: #DDFFF7;
 }
