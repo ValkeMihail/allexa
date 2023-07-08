@@ -1,7 +1,7 @@
 import  React ,{ useState,  useEffect } from 'react';
 import '../App.css';
 import { doc, getDoc } from 'firebase/firestore';
-import { db } from '../firebase'; // assuming firebase is initialized and exported as db
+import { db } from '../firebase';
 
 function AboutMe() {
 
@@ -25,14 +25,10 @@ function AboutMe() {
     <div className="about-container">
         <div className='headerAbout'>
             <img id="aboutmeImage" src={myImage} alt="" loading='lazy' />
-            <div className='aboutTitle'>
-                <h3>Photographer</h3>
-                <h2 id='aboutmeheader'>Allexa</h2>
-            </div>
             
         </div>
         <div className='description'>
-            <h1>About Me</h1>
+            <h1>ABOUT</h1>
             <div>
                 <p>
                     {bio}

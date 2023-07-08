@@ -1,12 +1,22 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Athiti');
 .about-container p{
-    font-family: "Lora", serif;
+  font-family: 'Athiti', sans-serif;
 }
 
+:root {
+  --lavander: #DEE2FF;
+  --afviolet: #A273A3;
+  --lemmonchiffon: #FFFACC;
+  --licorice: #13070C;
+  --outerspace: #444545;
+  --gunmetal: #2F323A;
+}
 
 html{
     box-sizing: border-box !important;
+    font-family: 'Athiti', sans-serif !important;
+      background: var(--lavander) !important;
 }
 #root{
 height: fit-content;
@@ -28,7 +38,7 @@ height: 78.5vh;
     }
 .App {
 
-  background: #DDFFF7 !important;
+  background: var(--lavander) !important;
   height: 100% !important;
 }
 .App-logo {
@@ -59,6 +69,7 @@ height: 78.5vh;
         top: 2vh !important;
         right: 2vw !important;
         
+        
     }
 
     .about-container h3{
@@ -87,9 +98,6 @@ height: 78.5vh;
 }
 } 
 
-html{
-    background: #DDFFF7 !important;
-}
 .image-gallery {
     grid-area: content;
     display: grid;
@@ -265,28 +273,14 @@ html{
     position: relative;
     width: 100vw !important;
   }
-  #aboutmeImage{
-    /* position: inherit;
-    object-fit: contain;
-   
-    background-color: #A273A3  !important ;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100vh !important;
-    border-radius: 1em;
-    border-top: 2px solid #2D1115;
-    border-bottom: 2px solid #2D1115;
-    z-index: 0; */
-    position: relative;
-    margin: 0;
-    width: 80vw;
-    height: 83vh;
-    max-height: 70%;
-    max-width: 100%;
-    object-fit: contain;
-   
-
-    
+#aboutmeImage {
+  position: relative;
+  margin: 0;
+  width: 80vw;
+  height: 83vh;
+  max-height: 70%;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 .headerAbout{
@@ -302,9 +296,12 @@ html{
     height: 30vh ;
     right: 24vw;
     display: flex;
+
     flex-direction: column;
+    font-family: 'Athiti', sans-serif !important;
     align-items: center;
     justify-content: center;
+    font-weight: 100 !important;
     
 }
 
@@ -614,9 +611,11 @@ html{
   .ContactContainer a {
     text-decoration: none;
     font-size: 2rem;
+    margin-bottom: 0.19em;
     color: #333 !important;
     transition: all 0.2s ease-in-out;
   }
+  
 
   .slide img{
     width: 100% !important;
@@ -626,14 +625,11 @@ html{
 
    #bar{
     position: fixed;
-    border-bottom: #A273A3 2px solid;
-    border-bottom-left-radius: 0.5em ;
-    border-bottom-right-radius: 0.5em ;
     width: 100%;
-    height: 6.95em;
+    height: 7em;
     top: 0em;
     z-index: 100;
-    background: #DDFFF7;
+    background: var(--gunmetal)
 
 
    }
@@ -825,24 +821,29 @@ background:  #A273A370;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #A273A3;
-    font-family: "Lora" , serif;
-    width: 58.5vw;
+    background: #A273A370;
+      width: 61vw;
     margin: 0;
-
+    font-weight: 300 !important;
 
 }
 .description h1{
-    color: #DDFFF7 !important;
+    color: var(--licorice) !important;
     font-size: 4vh;
+    text-shadow: none !important;
 }
 
 .description p {
-    color: #DDFFF7 !important;
+    color: var(--licorice) !important;
     font-size: 3vh;
+    margin: 1em 4em;
 }
 
 * ::selection {
     color: #580E38;
     background: #DDFFF7;
+}
+.aboutTitle h3,
+h2 {
+  color: var(--licorice) !important;
 }
